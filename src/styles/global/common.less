@@ -21,6 +21,10 @@ body {
   font-style: normal;
   line-height: 1.375;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  min-height: 100vh;
   padding-top: 147px;
 }
 
@@ -116,4 +120,12 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+button {
+  box-shadow: none;
+  outline: none;
+  color: @black;
+  font-family: @font1;
+  cursor: pointer;
 }
