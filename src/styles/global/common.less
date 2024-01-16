@@ -134,3 +134,35 @@ button {
   font-family: @font1;
   cursor: pointer;
 }
+
+input,
+textarea {
+  &::-webkit-input-placeholder {
+    color: #6C6C6C;
+  }
+  &::-moz-placeholder {
+    color: #6C6C6C;
+  }
+  &:-moz-placeholder {
+    color: #6C6C6C;
+  }
+  &:-ms-input-placeholder {
+    color: #6C6C6C;
+  }
+}
+
+input:focus,
+textarea:focus {
+  &::-webkit-input-placeholder {
+    color: transparent;
+  }
+  &::-moz-placeholder {
+    color: transparent;
+  }
+  &:-moz-placeholder {
+    color: transparent;
+  }
+  &:-ms-input-placeholder {
+    color: transparent;
+  }
+}
