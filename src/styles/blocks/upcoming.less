@@ -21,18 +21,31 @@
         display: flex;
         flex-wrap: wrap;  
     }
+    &__event-card{
+        max-width: 405px;
+        width: calc(33.333% - 60px);
+        margin: 0 30px 0;
+    }
     &__slider{
         display: flex;
         max-width: 525px;
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        margin-top: -50px;
+        margin-top: 70px;
     }
     &__link{
-        margin-top: 15px;
+        margin-top: 26px;
         margin-left: auto;
-        margin-right: 293px;
-        margin-bottom: 121px;
+        margin-right: 30px;
+        margin-bottom: 110px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__arrow{
+        padding: 0;
     }
 }
