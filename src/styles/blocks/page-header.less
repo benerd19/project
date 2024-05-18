@@ -54,6 +54,16 @@
         display: inline-block;
         width: 202px;
         height: 147px;
+
+        @media @bw1660 {
+            width: 152px;
+            height: 111px;
+        }
+
+        @media @bw768 {
+            width: 96px;
+            height: 70px;
+        }
     }
 
     &__logo-img {
@@ -62,7 +72,7 @@
     }
 
     &__nav {
-         // display: none;
+        // display: none;
         // // display: inline-block;
         box-sizing: border-box;
         display: flex;
@@ -80,7 +90,7 @@
             padding: 211px 30px 30px;
             background-color: fade(@gray, 98%);
             transition: transform 0.4s;
-
+            
             transform: translateX(-100%);
 
             overflow-x: hidden;
@@ -118,14 +128,14 @@
 
     &__nav-user {
         display: none;
-
+                    
         @media @bw1020 {
             display: flex;
             align-items: center;
             margin-top: 20px;
         }
     }
-
+    
     &__nav-user-link {
         margin-right: 25px;
         font-weight: 400;
@@ -133,7 +143,7 @@
         line-height: 22px;
         text-decoration: none;
     }
-
+    
     &__nav-logout {
         width: 24px;
         height: 24px;
@@ -145,7 +155,7 @@
         justify-content: flex-end;
         align-items: center;
         width: 202px;
-
+        
         @media @bw1660 {
             width: 152px;
         }
@@ -155,7 +165,6 @@
             margin-left: auto;
         }
     }
-
 
     &__sign-in-btn {
         display: inline-block;
@@ -210,7 +219,7 @@
 
     &__nav-toggle {
         display: none;
-
+                
         @media @bw1020 {
             display: block;
             position: relative;
@@ -234,6 +243,7 @@
             border-radius: 2px;
             background-color: @black;
             transform-origin: 50% 50%;
+            transition: transform 0.4s, box-shadow 0.4s;
         }
 
         &::before {
