@@ -1,5 +1,9 @@
 .event {
     padding: 40px 0 150px;
+
+    @media @bw768 {
+        padding: 40px 0 70px;
+    }
     
     &__container {
         .container;
@@ -8,6 +12,10 @@
     &__header {
         .container;
         margin-bottom: 80px;
+
+        @media @bw768 {
+            margin-bottom: 40px;
+        }
     }
 
     &__about {
@@ -17,6 +25,7 @@
         margin-bottom: 80px;
         @media @bw768 {
             flex-wrap: wrap;
+            margin-bottom: 60px;
         }
     }
 
@@ -54,6 +63,11 @@
         &::after {
             bottom: 0;
         }
+        &:first-child {
+            @media @bw768 {
+                margin-right: 10px;
+            }
+        }
         &:last-child {
             align-items: flex-start;
             text-align: left;
@@ -68,6 +82,15 @@
                     rgba(255, 255, 255, 0) 82.86%
                 );
             }
+            @media @bw768 {
+                margin-left: 10px;
+            }
+        }
+
+        @media @bw768 {
+            padding: 7.25px 0;
+            row-gap: 6.5px;
+            order: 2;
         }
     }
 
@@ -76,14 +99,21 @@
         font-style: normal;
         font-weight: 300;
         line-height: 36px;
-        &[datetime] {
-            &::after {
-                content: attr(data-caption);
-                margin-left: 10px;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 19px;
+        &::after {
+            content: attr(data-caption);
+            margin-left: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19px;
+
+            @media @bw768 {
+                font-size: 12px;
+                line-height: 14.4px;
             }
+        }
+        @media @bw768 {
+            font-size: 18px;
+            line-height: 21.6px;
         }
     }
 
@@ -91,12 +121,22 @@
         font-size: 16px;
         line-height: 19px;
         font-weight: 700;
+
+        @media @bw768 {
+            font-size: 12px;
+            line-height: 14.4px;
+        }
     }
 
     &__picture {
         display: block;
         width: 497px;
-        margin: 0 50px;        
+        margin: 0 50px;
+        
+        @media @bw768 {
+            margin: 0 37.5px 40px;
+            order: 1;
+        }
     }
 
     &__image {
@@ -107,5 +147,9 @@
     &__content {
         max-width: 830px;
         margin-bottom: 80px;
+
+        @media @bw768 {
+            margin-bottom: 40px;
+        }
     }
 }

@@ -7,6 +7,29 @@
       "order legend"; 
     width: 100%;
 
+    @media @bw1340 {
+      gap: 65px 6.5%;
+      grid-template-columns: 340px calc(93.5% - 340px);
+    }
+
+    @media @bw1020 {
+      gap: 60px;
+      grid-template-columns: auto 390px;
+      grid-template-areas: 
+        "scheme scheme"
+        "checks legend"
+        "checks order"; 
+    }
+
+    @media @bw768 {
+      grid-template-columns: 100%;
+      grid-template-areas: 
+        "scheme"
+        "legend"
+        "checks"
+        "order"; 
+    }
+
     &__checks {
         grid-area: checks;
         display: flex;
@@ -31,6 +54,9 @@
         flex-direction: column;
         align-items: flex-end;
         text-align: right;
+        @media @bw768 {
+          text-align: left;
+        }
     }
 
     &__section-title {
@@ -63,9 +89,15 @@
         padding: 6px 56px;
         background-color: @black;
         color: @white;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 16px;
         line-height: 22px;
+
+        @media @bw768 {
+          padding: 6px 47px;
+          font-size: 11px;
+          line-height: 15px;
+        }
     }
   
     &__scheme-wrapper {
@@ -102,6 +134,11 @@
         &::after {
           content: " " attr(data-caption) " | " attr(data-price);
         }
+
+        @media @bw768 {
+          font-size: 14px;
+          font-weight: 400;
+        }
       }
 
       &__sum {
@@ -118,7 +155,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
         margin: 25px 0 53px 0;
         &::before {
@@ -130,6 +167,12 @@
           margin-left: 4px;
           font-size: 0.95em;
         }
+
+        @media @bw768 {
+          font-size: 18px;
+          font-weight: 600;
+          margin: 25px 0 40px 0;
+        }
       }
 
       &__price {
@@ -137,6 +180,10 @@
         flex-direction: column;
         align-items: flex-end;
         margin: 0 0 35px;
+
+        @media @bw768 {
+          align-items: flex-start;
+        }
       }
 
       &__price-item {
@@ -177,17 +224,29 @@
       &__submit {
         box-sizing: border-box;
         padding: 15px 141px;
+        line-height: 22px;
         display: flex;
         justify-content: center;
         align-items: center;
         outline: none;
         max-width: 405px;
+
+        @media @bw768 {
+          padding: 15px 86px;
+          font-size: 14px;
+          line-height: 19px;
+        }
       }
 
       &__notation {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+
+        @media @bw768 {
+          align-items: flex-start;
+          margin-right: auto;
+        }
       }
 
       &__note {
@@ -199,6 +258,10 @@
         padding-top: 2px;
         font-size: 14px;
         line-height: 19px;
+
+        @media @bw768 {
+          padding-left: 44px;
+        }
 
         &--free {
             &::before,
@@ -226,12 +289,16 @@
                 content: "";
                 display: block;
                 position: absolute;
-                left: 6px;
+                left: 4px;
                 top: 0;
                 width: 24px;
                 height: 24px;
                 border-radius: 50%;
                 background-color: @gray_dark;
+
+                @media @bw768 {
+                  left: 0;
+                }
             }
         }
 

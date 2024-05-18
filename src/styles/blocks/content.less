@@ -23,6 +23,7 @@
         margin-bottom: 0;
       }
     }
+
     h1 {
       font-size: 32px;
     }
@@ -37,6 +38,10 @@
     }
     h5 {
       font-size: 18px;
+
+      @media @bw768 {
+        font-size: 16px;
+      }
     }
     h6 {
       font-size: 16px;
@@ -51,6 +56,13 @@
       }
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    p {
+      @media @bw768 {
+        font-size: 14px;
+        line-height: 19.07px;
       }
     }
     ul,
@@ -75,6 +87,18 @@
         border-radius: 50%;
         background-color: @red;
         pointer-events: none;
+
+        @media @bw768 {
+          top: 12px;
+          width: 3px;
+          height: 3px;
+        }
+      }
+  
+      @media @bw768 {
+        padding-left: 8px;
+        font-size: 14px;
+        line-height: 28px;
       }
     }
     ol {
@@ -89,6 +113,10 @@
         display: inline-block;
         min-width: 20px;
         white-space: pre;
+      }
+      @media @bw768 {
+        font-size: 14px;
+        line-height: 19.07px;
       }
     }
     ul > li,
