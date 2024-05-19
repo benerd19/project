@@ -32,7 +32,9 @@
   }
 
   &__doit-text1,
-  &__doit-text2 {
+  &__doit-text2,
+  &__doit-text11,
+  &__doit-text12 {
     display: flex;
     width: 100%;
     margin: 0;
@@ -41,6 +43,7 @@
     line-height: 120%;
     font-size: 128px;
     font-style: normal;
+    text-wrap: nowrap;
 
     @media @bw1660 {
       font-size: 90px;
@@ -50,6 +53,7 @@
     @media @bw1340 {
       font-size: 80px;
       line-height: 96px;
+      margin-left: -5px;
     }
 
     @media @bw768 {
@@ -62,6 +66,10 @@
     margin-left: -52px;
     white-space: nowrap;
     overflow: visible;
+
+    @media @bw1340 {
+      display: none;
+    }
   }
 
   &__doit-text2 {
@@ -75,6 +83,30 @@
 
     @media @bw768 {
       margin-left: -57px;
+    }
+  }
+
+  &__doit-text11 {
+    @media @bw1340 {
+      margin-left: -30px;
+    }
+  }
+
+  &__doit-text12 {
+    @media @bw1340 {
+      text-align: right;
+      margin-left: 100px;
+    }
+  }
+
+  &__doit-text11,
+  &__doit-text12 {
+    @media @bw1340 {
+      display: block;
+    }
+
+    @media @w1340 {
+      display: none;
     }
   }
 }

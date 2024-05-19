@@ -333,4 +333,58 @@
         pickerInit($(this));
       });
     };
+
+    let tablesBlack = document.querySelectorAll('.scene__table-group--black');
+    let tablesRed = document.querySelectorAll('.scene__table-group--red');
+    let checks = document.querySelectorAll('.reserve__check');
+    let prices = document.querySelectorAll('.reserve__qty')
+
+    let placesAmountRed = 0;
+    let placesAmountBlack = 0;
+
+    checks.forEach(check => {
+      check.firstElementChild.addEventListener('change', () => {
+        let checkNum = check.getAttribute('data-number')
+
+        tablesBlack.forEach(table => {
+          let tableNum = table.getAttribute('data-number')
+          if (checkNum == tableNum) {
+            if (table.classList.contains('scene__table-group--black-active')) {
+              placesAmountBlack -= +table.getAttribute('data-places')
+            } else {
+              placesAmountBlack += +table.getAttribute('data-places')
+            }
+            table.classList.toggle('scene__table-group--black-active')
+            table.nextElementSibling.classList.toggle('scene__table-num-active')
+          }
+        })
+
+        tablesRed.forEach(table => {
+          let tableNum = table.getAttribute('data-number')
+          if (checkNum == tableNum) {
+            if (table.classList.contains('scene__table-group--red-active')) {
+              placesAmountRed -= +table.getAttribute('data-places')
+            } else {
+              placesAmountRed += +table.getAttribute('data-places')
+            }
+            table.classList.toggle('scene__table-group--red-active')
+            table.nextElementSibling.classList.toggle('scene__table-num-active')
+
+          }
+        })
+
+        prices.forEach(price => {
+          let priceNum = +price.getAttribute('data-price')
+          if (priceNum === 1400) {
+            price.textContent = placesAmountRed
+            price.nextElementSibling.textContent = placesAmountRed * 1400
+          } else {
+            price.textContent = placesAmountBlack
+            price.nextElementSibling.textContent = placesAmountBlack * 1250
+          }
+        })
+        document.querySelector('.reserve__total').textContent = (placesAmountBlack * 1250) + (placesAmountRed * 1400)
+
+      })
+    })
 })();
