@@ -107,6 +107,16 @@
     background-color: @gray_dark;
     background-clip: padding-box;
     opacity: 1;
+    
+    @media @bw768 {
+      width: 9px;
+      height: 2px;
+    }
+
+    @media @bw1340 {
+      width: 9px;
+      height: 2px;
+    }
   }
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: @black;
@@ -115,4 +125,15 @@
   .swiper-pagination-horizontal.swiper-pagination-bullets
     .swiper-pagination-bullet {
     margin: 2px 3px;
+  }
+
+  .swiper-arrow-icon{
+    @media @bw768 {
+      width: 67px;
+      height: 40px;
+    }
+    @media @bw1340 {
+      width: 67px;
+      height: 40px;
+    }
   }

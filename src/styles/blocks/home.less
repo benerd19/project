@@ -3,6 +3,14 @@
 
   &__listing {
     margin-bottom: 95px;
+    
+    @media @bw1660 {
+      margin-bottom: 105px;
+    }
+
+    @media @bw1340 {
+      margin-bottom: 75px;
+    }
   }
 
   &__doit {
@@ -12,6 +20,15 @@
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
+
+    @media @bw1660 {
+      margin-top: 130px;
+    }
+
+    @media @bw1340 {
+      margin-top: 100px;
+    }
+
   }
 
   &__doit-text1,
@@ -24,6 +41,21 @@
     line-height: 120%;
     font-size: 128px;
     font-style: normal;
+
+    @media @bw1660 {
+      font-size: 90px;
+      line-height: 108px;
+    }
+
+    @media @bw1340 {
+      font-size: 80px;
+      line-height: 96px;
+    }
+
+    @media @bw768 {
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 
   &__doit-text1 {
@@ -36,5 +68,13 @@
     margin-left: 712px;
     white-space: nowrap;
     overflow: visible;
+
+    @media @bw1660 {
+      margin-left: 418px;
+    }
+
+    @media @bw768 {
+      margin-left: -57px;
+    }
   }
 }
