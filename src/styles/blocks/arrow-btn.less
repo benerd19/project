@@ -33,6 +33,11 @@
     &__icon {
         &--down {
             transform: rotate(90deg);
+            
+            @media @bw1340 {
+                width: 67px;
+                height: 40px;
+            }
         }
         &--left {
             transform: rotate(180deg);
@@ -46,5 +51,10 @@
         white-space: nowrap;
         text-align: center;
         margin: 0 0 27px 0;
+
+        @media @bw1340 {
+            font-size: 14px;
+            line-height: 19px;
+        }
     }
 }
